@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+      RewriteEngine on
+      RewriteBase /eduvirt/
+
+      RewriteCond %{REQUEST_URI} ^system.*
+      RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+      RewriteCond %{REQUEST_URI} ^application.*
+      RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteRule ^(.*)$ /index.php?/$1 [L]
+</IfModule>
+
+#tambien se puede configurar en vhost del apache para cargar esta variable y se evitar por este metodod
+<IfModule mod_env.c>
+    #SetEnv CI_ENV production //si comentarizas se pone en desarrollo y muestra los mensajes de error, si descomentarizas se pone en produccion y no muestra los mensajes de error
+</IfModule>
+
+#<IfModule !mod_rewrite.c>
+  # If we don't have mod_rewrite installed, all 404's
+  # can be sent to index.php, and everything works as normal.
+  # Submitted by: ElliotHaughin
+  #ErrorDocument 404 /index.php
+#</IfModule>

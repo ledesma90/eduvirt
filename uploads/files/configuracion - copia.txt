@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Appeon\Developer2016\appeon_workarounds125e\appeon_workarounds.pbl;
+
+gs_appeonuser = appeongetappeonusername()
+gs_clienttype = appeongetclienttype()
+
+
+string gs_appeonuser
+string gs_clienttype

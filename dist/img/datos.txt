@@ -1,0 +1,9 @@
+[
+	{
+		"persona": 10000222,
+		"primer_nombre": "ELIZABETH",
+		"segundo_nombre": "FULVIA",
+		"primer_apellido": "ACUÑA",
+		"segundo_apellido": "TORRES"
+	}
+]
